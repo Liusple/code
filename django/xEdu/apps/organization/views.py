@@ -229,42 +229,44 @@ class AddFavView(View):
             else:
                 return HttpResponse('{"status":"fail", "msg":"收藏出错"}', content_type='application/json')
 
-#
-# class TeacherListView(View):
-#     """
-#     课程讲师列表页
-#     """
-#     def get(self, request):
-#         all_teachers = Teacher.objects.all()
-#
-#         #课程讲师搜索
-#         search_keywords = request.GET.get('keywords', "")
-#         if search_keywords:
-#             all_teachers = all_teachers.filter(Q(name__icontains=search_keywords)|
-#                                                Q(work_company__icontains=search_keywords)|
-#                                                Q(work_position__icontains=search_keywords))
-#
-#         sort = request.GET.get('sort', "")
-#         if sort:
-#             if sort == "hot":
-#                 all_teachers = all_teachers.order_by("-click_nums")
-#
-#         sorted_teacher = Teacher.objects.all().order_by("-click_nums")[:3]
-#
-#         #对讲师进行分页
-#         try:
-#             page = request.GET.get('page', 1)
-#         except PageNotAnInteger:
-#             page = 1
-#
-#         p = Paginator(all_teachers, 1, request=request)
-#
-#         teachers = p.page(page)
-#         return render(request, "teachers-list.html", {
-#             "all_teachers":teachers,
-#             "sorted_teacher":sorted_teacher,
-#             "sort":sort,
-#         })
+
+class TeacherListView(View):
+    """
+    课程讲师列表页
+    """
+    def get(self, request):
+        all_teachers = Teacher.objects.all()
+
+        #课程讲师搜索
+        search_keywords = request.GET.get('keywords', "")
+        if search_keywords:
+            all_teachers = all_teachers.filter(Q(name__icontains=search_keywords)|
+                                               Q(work_company__icontains=search_keywords)|
+                                               Q(work_position__icontains=search_keywords))
+
+        sort = request.GET.get('sort', "")
+        if sort:
+            if sort == "hot":
+                all_teachers = all_teachers.order_by("-click_nums")
+
+        sorted_teacher = Teacher.objects.all().order_by("-click_nums")[:3]
+
+        #对讲师进行分页
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+
+        p = Paginator(all_teachers, 1, request=request)
+
+        teachers = p.page(page)
+        teachers_num = all_teachers.count()
+        return render(request, "teachers-list.html", {
+            "all_teachers":teachers,
+            "sorted_teacher":sorted_teacher,
+            "sort":sort,
+            "teachers_num": teachers_num
+        })
 
 
 class TeacherDetailView(View):

@@ -22,12 +22,17 @@ class ForgetForm(forms.Form):
     captcha = CaptchaField(error_messages={"invalid":u"验证码错误"})
 
 
-# class UserInfoForm(forms.ModelForm):
-#     class Meta:
-#         model = UserProfile
-#         fields = ['nick_name', 'gender', 'birday', 'address', 'mobile']
+class UserInfoForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['nick_name', 'gender', 'birday', 'address', 'mobile']
 
 
-# class ModifyPwdForm(forms.Form):
-#     password1 = forms.CharField(required=True, min_length=5)
-#     password2 = forms.CharField(required=True, min_length=5)
+class ModifyPwdForm(forms.Form):
+    password1 = forms.CharField(required=True, min_length=5)
+    password2 = forms.CharField(required=True, min_length=5)
+
+class UploadImageForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['image']
