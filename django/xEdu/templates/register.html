@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-    <title>酷学在线注册</title>
+    <title>xEdu在线注册</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 
@@ -66,9 +66,8 @@
 <header>
     <div class="c-box fff-box">
         <div class="wp header-box">
-            <p class="fl hd-tips">酷学，在线学习平台！</p>
+            <p class="fl hd-tips">xEdu在线学习平台！</p>
             <ul class="fr hd-bar">
-                <li>服务电话：<span>4001008031</span></li>
                 <li><a href="/login/">[登录]</a></li>
                 <li class="active"><a href="/register/">[注册]</a></li>
             </ul>
@@ -79,7 +78,7 @@
     <div class="c-box bg-box">
         <div class="login-box clearfix">
             <div class="hd-login clearfix">
-                <a class="index-logo" href="/"></a>
+                <a class="" href=""></a>
                 <h1>用户注册</h1>
                 <a class="index-font" href="{% url 'index' %}">回到首页</a>
             </div>
@@ -87,12 +86,13 @@
                 <div class="imgslide">
                     <ul class="imgs">
 
-                        <li><a href=""><img width="483" height="472" src="../images/57a801860001c34b12000460.jpg" /></a></li>
+                        <li><a href=""><img width="483" height="472" src="
+                        {% static 'images/01_register.jpg' %}" /></a></li>
 
-                        <li><a href=""><img width="483" height="472" src="../images/57a801860001c34b12000460.jpg" /></a></li>
+                        <li><a href=""><img width="483" height="472" src="
+                        {% static 'images/02_register.jpg' %}" /></a></li>
 
-                        <li><a href=""><img width="483" height="472" src="../images/57a801860001c34b12000460.jpg" /></a></li>
-
+    
                     </ul>
                 </div>
                 <div class="unslider-arrow prev"></div>
@@ -154,7 +154,7 @@
                     {% csrf_token %}
                     </form>
                 </div>
-                <p class="form-p">已有账号？<a href="login.html">[立即登录]</a></p>
+                <p class="form-p">已有账号？<a href="{url 'login'}}">[立即登录]</a></p>
             </div>
         </div>
     </div>

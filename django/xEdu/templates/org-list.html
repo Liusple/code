@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}课程机构列表 - 酷学在线网{% endblock %}
+{% block title %}课程机构列表 - xEdu{% endblock %}
 {% load staticfiles %}
 {% block custom_bread %}
     <section>
@@ -24,7 +24,7 @@
 					<div class="cont">
                         <a href="?city={{ city_id }}"><span class="{% ifequal category '' %}active2{% endifequal %}">全部</span></a>
 
-                            <a href="?ct=pxjg&city={{ city_id }}"><span class="{% ifequal category 'pxjg' %}active2{% endifequal %}">培训机构</span></a>
+                            <a href="?ct=pxjg &city={{ city_id }}"><span class="{% ifequal category 'pxjg' %}active2{% endifequal %}">培训机构</span></a>
 
                             <a href="?ct=gx&city={{ city_id }}"><span class="{% ifequal category 'gx' %}active2{% endifequal %}">高校</span></a>
 
@@ -75,14 +75,15 @@
                              </a>
                         </div>
                         <ul class="cont">
-                            <li class="first"><p class="pic9">课程数：<span>{{ course_org.course_nums }}</span></p><p class="c7">学习人数：<span>{{ course_org.students }}</span></p></li>
+                            <li class="first"><p class="pic9">课程数：<span>{{ course_org.course_nums }}
+                            </span></p><!-- <p class="c7">学习人数：<span>{{ course_org.students }}</span></p> --></li>
                             <li class="c8" style="padding-left:18px;">{{ course_org.city }}</li>
                             <li class="pic10" style="padding-left:18px;">收藏數：
                                 <span>{{ course_org.fav_nums }}</span>
                             </li>
                         </ul>
                     </dd>
-                    <div class="buy start_groupbuy jsShowPerfect2" data-id="22"><br/>联系<br/>服务</div>
+                   <!--  <div class="buy start_groupbuy jsShowPerfect2" data-id="22"><br/>联系<br/>服务</div> -->
                 </dl>
             {% endfor %}
 		</div>

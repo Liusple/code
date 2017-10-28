@@ -71,7 +71,7 @@ class RegisterView(View):
             #写入欢迎注册消息
             user_message = UserMessage()
             user_message.user = user_profile.id
-            user_message.message = u"欢迎注册酷学在线网"
+            user_message.message = u"欢迎注册xEdu"
             user_message.save()
 
             send_register_email(user_name, "register")
@@ -326,7 +326,6 @@ class MymessageView(LoginRequiredMixin, View):
 
 
 class IndexView(View):
-    #酷学在线网 首页
     def get(self, request):
         #取出轮播图
         all_banners = Banner.objects.all().order_by('index')

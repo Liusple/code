@@ -45,8 +45,8 @@ class BaseSetting(object):
 
 
 class GlobalSettings(object):
-    site_title = "酷学后台管理系统"
-    site_footer = "酷学在线网"
+    site_title = "xEdu后台管理系统"
+    site_footer = "xEdu在线网"
     menu_style = "accordion"
 
 

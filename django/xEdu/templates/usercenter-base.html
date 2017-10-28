@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-	<title>{% block title %}个人资料 - 酷学网{% endblock %}</title>
+	<title>{% block title %}个人资料 - xEdu{% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -25,7 +25,6 @@
 		<div  class="header2 header">
  			<div class="top">
 				<div class="wp">
-					<div class="fl"><p>服务电话：<b>0571-52002500</b></p></div>
 					<!--登录后跳转-->
                     
                         {% if request.user.is_authenticated %}
@@ -61,7 +60,7 @@
             
     <div class="">
         <div class="">
-            <h1>CoolLearn</h1>
+            <h1>xEdu</h1>
         </div>
     </div>
 			</div>
@@ -165,9 +164,9 @@
 <!--sidebar start-->
 <section>
     <ul class="sidebar">
-        <li class="qq">
+<!--         <li class="qq">
             <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2023525077&site=qq&menu=yes"></a>
-        </li>
+        </li> -->
         <li class="totop"></li>
     </ul>
 </section>

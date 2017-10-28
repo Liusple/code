@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}课程机构列表 - 酷学网{% endblock %}
+{% block title %}课程机构列表 - xEdu{% endblock %}
 {% load staticfiles %}
 {% block custom_bread %}
 {% endblock %}
@@ -87,7 +87,7 @@
                             {% for course in courses %}
                             <div class="module1_{{ forloop.counter|add:2 }} box">
                                 <a href="{% url 'course:course_detail' course.id %}">
-                                    <img width="233" height="190" src="{{ MEDIA_URL }}{{ course.image }}"/>
+                                   <img width="233" height="190" src="{{ MEDIA_URL }}{{ course.image }}"/>
                                 </a>
                                 <div class="des">
                                     <a href="{% url 'course:course_detail' course.id %}">
