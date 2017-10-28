@@ -1,0 +1,403 @@
+[D 171017 12:58:08 Profile:19] AvatarHandler type(files):<type 'list'>
+[D 171017 12:58:08 retry:200] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+[D 171017 12:58:08 connectionpool:208] Starting new HTTP connection (1): up.qiniu.com
+[D 171017 12:58:09 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 12:58:09 Profile:22] Fmw8ksVwkGbyBicH3-k6SFkh1WIG
+[D 171017 12:58:09 Profile:28] 10000
+[I 171017 12:58:12 web:2063] 200 POST /api/profile/avatar (192.168.2.101) 4350.54ms
+[D 171017 13:11:41 Profile:19] AvatarHandler type(files):<type 'list'>
+[D 171017 13:11:41 connectionpool:243] Resetting dropped connection: up.qiniu.com
+[D 171017 13:11:41 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 13:11:41 Profile:22] FkhV7OPfwDR3QTA8iDMu0TmUexH7
+[D 171017 13:11:41 Profile:28] 10000
+[I 171017 13:11:41 web:2063] 200 POST /api/profile/avatar (192.168.2.101) 163.80ms
+[I 171017 13:12:26 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[D 171017 13:12:50 Profile:19] AvatarHandler type(files):<type 'list'>
+[D 171017 13:12:50 retry:200] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+[D 171017 13:12:50 connectionpool:208] Starting new HTTP connection (1): up.qiniu.com
+[D 171017 13:12:50 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 13:12:50 Profile:22] FmyaPesgUtGf5K5lZaXUtBLd046f
+[D 171017 13:12:50 Profile:28] 10000
+[I 171017 13:12:50 web:2063] 200 POST /api/profile/avatar (192.168.2.101) 344.09ms
+[I 171017 13:13:59 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:14:17 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:15:01 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[W 171017 13:15:35 web:2063] 404 GET /api/profile/ (192.168.2.101) 2.75ms
+[E 171017 13:15:41 web:1590] Uncaught exception GET /api/profile (192.168.2.101)
+    HTTPServerRequest(protocol='http', host='192.168.2.102:8000', method='GET', uri='/api/profile', version='HTTP/1.1', remote_ip='192.168.2.101', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.2.102:8000', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'session_id="2|1:0|10:1508211318|10:session_id|44:M2FhZDY5MzI3N2VlNDc5Yjk5ZmUzZTkwMmU2NzgyZWI=|0145cae8e689e6272f6fe7318e4ddd85687416f1fb2588e0c32acbd895a9702a"; _xsrf=2|51a877dc|a0f928a121f4af9954980d110fe6ca54|1508217335', 'Cache-Control': 'no-cache', 'Postman-Token': 'fa246035-1763-6c24-c427-d4057fb898b3'})
+    Traceback (most recent call last):
+      File "/home/liusple/.virtualenvs/py2_tornado/local/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/liusple/python/project/tornado/PrettyHome/utils/commons.py", line 13, in wrapper
+        fun(request_handler_obj, *args, **kwargs)
+      File "/home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py", line 53, in get
+        return self.write({"errcode":RET_OK, "errmsg":"OK", "data":{"user_id":user_id, "name":ret["up_name"], "mobile":ret["up_mobile"], "avatar":img_url}})
+    NameError: global name 'RET_OK' is not defined
+[E 171017 13:15:41 web:2063] 500 GET /api/profile (192.168.2.101) 15.07ms
+[I 171017 13:15:51 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:15:54 web:2063] 200 GET /api/profile (192.168.2.101) 3.85ms
+[D 171017 13:47:28 Profile:71] {'up_id_card': None, 'up_real_name': None}
+[I 171017 13:47:28 web:2063] 200 GET /api/profile/auth (192.168.2.101) 58.29ms
+[D 171017 13:48:21 Profile:71] {'up_id_card': None, 'up_real_name': None}
+[I 171017 13:48:21 web:2063] 200 GET /api/profile/auth (192.168.2.101) 3.95ms
+[D 171017 13:48:25 Profile:71] {'up_id_card': None, 'up_real_name': None}
+[I 171017 13:48:25 web:2063] 200 GET /api/profile/auth (192.168.2.101) 4.53ms
+[I 171017 13:49:11 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[D 171017 13:49:24 Profile:71] {'up_id_card': None, 'up_real_name': None}
+[I 171017 13:49:24 web:2063] 200 GET /api/profile/auth (192.168.2.101) 75.09ms
+[I 171017 13:51:38 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:51:51 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:53:22 web:2063] 200 POST /api/profile/auth (192.168.2.101) 2.03ms
+[I 171017 13:54:05 web:2063] 200 POST /api/profile/auth (192.168.2.101) 29.93ms
+[I 171017 13:56:56 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:56:58 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:57:49 web:2063] 200 POST /api/profile/name (192.168.2.101) 131.03ms
+[I 171017 13:58:09 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:58:18 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:58:23 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Profile.py modified; restarting server
+[I 171017 13:59:28 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/urls.py modified; restarting server
+[I 171017 14:25:46 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:25:48 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:27:20 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:27:37 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:29:01 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Passport.py modified; restarting server
+[W 171017 14:29:44 web:2063] 405 POST /api/profile/area (192.168.2.101) 3.50ms
+[I 171017 14:30:01 web:2063] 200 POST /api/house/area (192.168.2.101) 4.20ms
+[E 171017 14:30:42 House:63] format requires a mapping
+[I 171017 14:30:42 web:2063] 200 POST /api/house/area (192.168.2.101) 7.23ms
+[I 171017 14:31:13 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:31:23 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:31:28 web:2063] 200 POST /api/house/area (192.168.2.101) 85.70ms
+[I 171017 14:32:03 web:2063] 200 POST /api/house/area (192.168.2.101) 16.68ms
+[I 171017 14:33:40 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:35:10 web:2063] 200 POST /api/house/area (192.168.2.101) 10.35ms
+[I 171017 14:35:21 web:2063] 200 POST /api/house/area (192.168.2.101) 48.86ms
+[I 171017 14:35:35 web:2063] 200 POST /api/house/area (192.168.2.101) 30.65ms
+[I 171017 14:35:50 web:2063] 200 POST /api/house/area (192.168.2.101) 34.08ms
+[I 171017 14:35:54 web:2063] 200 POST /api/house/area (192.168.2.101) 18.80ms
+[I 171017 14:36:14 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:37:15 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:37:26 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:37:47 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[D 171017 14:38:19 House:31] [{'ai_area_id': 1L, 'ai_name': u'jiading'}, {'ai_area_id': 3L, 'ai_name': u'jingan'}, {'ai_area_id': 4L, 'ai_name': u'minhang'}, {'ai_area_id': 5L, 'ai_name': u'pudong'}, {'ai_area_id': 6L, 'ai_name': u'xuhui'}]
+[I 171017 14:38:19 web:2063] 200 GET /api/house/area (192.168.2.101) 6.34ms
+[I 171017 14:39:59 House:25] hit redis: area_info
+[I 171017 14:39:59 web:2063] 200 GET /api/house/area (192.168.2.101) 5.54ms
+[I 171017 14:41:30 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[E 171017 14:46:01 House:83] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a inner join ih_area_info b on a.hi_area_id=b.ai_area_id where a.hi_user_id=1000' at line 1")
+[I 171017 14:46:01 web:2063] 200 GET /api/house/my (192.168.2.101) 80.39ms
+[I 171017 14:46:40 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[E 171017 14:46:48 House:83] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a inner join ih_area_info b on a.hi_area_id=b.ai_area_id where a.hi_user_id=1000' at line 1")
+[I 171017 14:46:48 web:2063] 200 GET /api/house/my (192.168.2.101) 26.73ms
+[I 171017 14:48:56 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[E 171017 14:48:59 House:83] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a inner join ih_area_info as b on a.hi_area_id=b.ai_area_id where a.hi_user_i' at line 1")
+[I 171017 14:48:59 web:2063] 200 GET /api/house/my (192.168.2.101) 34.53ms
+[I 171017 14:49:19 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:49:44 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:49:46 web:2063] 200 GET /api/house/my (192.168.2.101) 229.43ms
+[I 171017 14:50:44 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:50:50 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:50:52 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:50:54 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:51:48 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:54:48 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:56:39 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:56:47 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:56:49 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:56:54 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:57:05 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 14:58:23 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:00:33 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:01:39 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:01:46 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:08:44 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:18:09 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:19:21 web:2063] 200 POST /api/house/info (192.168.2.101) 4.91ms
+[I 171017 15:19:52 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:19:56 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[E 171017 15:21:09 web:1590] Uncaught exception POST /api/house/info (192.168.2.101)
+    HTTPServerRequest(protocol='http', host='192.168.2.102:8000', method='POST', uri='/api/house/info', version='HTTP/1.1', remote_ip='192.168.2.101', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '274', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.2.102:8000', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'session_id="2|1:0|10:1508211318|10:session_id|44:M2FhZDY5MzI3N2VlNDc5Yjk5ZmUzZTkwMmU2NzgyZWI=|0145cae8e689e6272f6fe7318e4ddd85687416f1fb2588e0c32acbd895a9702a"; _xsrf=2|51a877dc|a0f928a121f4af9954980d110fe6ca54|1508217335', 'Cache-Control': 'no-cache', 'Content-Type': 'application/json', 'Postman-Token': '8aba1e76-d140-d06a-2d07-fb354ae051af'})
+    Traceback (most recent call last):
+      File "/home/liusple/.virtualenvs/py2_tornado/local/lib/python2.7/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/home/liusple/python/project/tornado/PrettyHome/handlers/BaseHandler.py", line 22, in prepare
+        self.json_args = json.loads(self.request.body)
+      File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+        return _default_decoder.decode(s)
+      File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+      File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+        obj, end = self.scan_once(s, idx)
+    ValueError: Expecting , delimiter: line 6 column 2 (char 53)
+[E 171017 15:21:09 web:2063] 500 POST /api/house/info (192.168.2.101) 14.47ms
+[E 171017 15:21:38 web:1590] Uncaught exception POST /api/house/info (192.168.2.101)
+    HTTPServerRequest(protocol='http', host='192.168.2.102:8000', method='POST', uri='/api/house/info', version='HTTP/1.1', remote_ip='192.168.2.101', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '276', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.2.102:8000', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'session_id="2|1:0|10:1508211318|10:session_id|44:M2FhZDY5MzI3N2VlNDc5Yjk5ZmUzZTkwMmU2NzgyZWI=|0145cae8e689e6272f6fe7318e4ddd85687416f1fb2588e0c32acbd895a9702a"; _xsrf=2|51a877dc|a0f928a121f4af9954980d110fe6ca54|1508217335', 'Cache-Control': 'no-cache', 'Content-Type': 'application/json', 'Postman-Token': '3db573ba-c63b-3ee3-8869-172b4cdd19db'})
+    Traceback (most recent call last):
+      File "/home/liusple/.virtualenvs/py2_tornado/local/lib/python2.7/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/home/liusple/python/project/tornado/PrettyHome/handlers/BaseHandler.py", line 22, in prepare
+        self.json_args = json.loads(self.request.body)
+      File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+        return _default_decoder.decode(s)
+      File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+      File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+        obj, end = self.scan_once(s, idx)
+    ValueError: Expecting , delimiter: line 6 column 2 (char 53)
+[E 171017 15:21:38 web:2063] 500 POST /api/house/info (192.168.2.101) 13.75ms
+[E 171017 15:21:55 web:1590] Uncaught exception POST /api/house/info (192.168.2.101)
+    HTTPServerRequest(protocol='http', host='192.168.2.102:8000', method='POST', uri='/api/house/info', version='HTTP/1.1', remote_ip='192.168.2.101', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '241', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.2.102:8000', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'session_id="2|1:0|10:1508211318|10:session_id|44:M2FhZDY5MzI3N2VlNDc5Yjk5ZmUzZTkwMmU2NzgyZWI=|0145cae8e689e6272f6fe7318e4ddd85687416f1fb2588e0c32acbd895a9702a"; _xsrf=2|51a877dc|a0f928a121f4af9954980d110fe6ca54|1508217335', 'Cache-Control': 'no-cache', 'Content-Type': 'application/json', 'Postman-Token': '9e849cfd-d9ba-ae58-364c-2eebdb43b745'})
+    Traceback (most recent call last):
+      File "/home/liusple/.virtualenvs/py2_tornado/local/lib/python2.7/site-packages/tornado/web.py", line 1488, in _execute
+        result = self.prepare()
+      File "/home/liusple/python/project/tornado/PrettyHome/handlers/BaseHandler.py", line 22, in prepare
+        self.json_args = json.loads(self.request.body)
+      File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+        return _default_decoder.decode(s)
+      File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+        obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+      File "/usr/lib/python2.7/json/decoder.py", line 380, in raw_decode
+        obj, end = self.scan_once(s, idx)
+    ValueError: Expecting , delimiter: line 6 column 2 (char 53)
+[E 171017 15:21:55 web:2063] 500 POST /api/house/info (192.168.2.101) 7.54ms
+[E 171017 15:22:19 torndb:236] Error connecting to MySQL on 127.0.0.1
+[E 171017 15:22:19 House:241] (1054, "Unknown column 'hi_house_uint' in 'field list'")
+[I 171017 15:22:19 web:2063] 200 POST /api/house/info (192.168.2.101) 36.03ms
+[I 171017 15:22:38 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:24:44 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[D 171017 15:24:47 House:255] insert into ih_house_facility(hf_house_id, hf_facility_id) values;(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s)
+[D 171017 15:24:47 House:256] (1L, u'[', 1L, u'1', 1L, u',', 1L, u'2', 1L, u',', 1L, u'3', 1L, u',', 1L, u'4', 1L, u',', 1L, u'5', 1L, u',', 1L, u'6', 1L, u',', 1L, u'7', 1L, u',', 1L, u'8', 1L, u',', 1L, u'9', 1L, u']')
+[E 171017 15:24:47 House:259] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';(1, '['),(1, '1'),(1, ','),(1, '2'),(1, ','),(1, '3'),(1, ','),(1, '4'),(1, ','' at line 1")
+[I 171017 15:24:47 web:2063] 200 POST /api/house/info (192.168.2.101) 65.40ms
+[I 171017 15:25:47 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[D 171017 15:27:00 House:255] insert into ih_house_facility(hf_house_id, hf_facility_id) values;(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s)
+[D 171017 15:27:00 House:256] (2L, u'[', 2L, u'1', 2L, u',', 2L, u'2', 2L, u',', 2L, u'3', 2L, u',', 2L, u'4', 2L, u',', 2L, u'5', 2L, u',', 2L, u'6', 2L, u',', 2L, u'7', 2L, u']')
+[D 171017 15:27:00 House:257] insert into ih_house_facility(hf_house_id, hf_facility_id) values;(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s)
+[E 171017 15:27:00 House:260] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';(2, '['),(2, '1'),(2, ','),(2, '2'),(2, ','),(2, '3'),(2, ','),(2, '4'),(2, ','' at line 1")
+[I 171017 15:27:00 web:2063] 200 POST /api/house/info (192.168.2.101) 106.32ms
+[I 171017 15:27:22 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:28:12 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[D 171017 15:29:22 House:255] insert into ih_house_facility(hf_house_id, hf_facility_id) values(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s),(%s, %s)
+[D 171017 15:29:22 House:256] (3L, 1, 3L, 2, 3L, 3, 3L, 4, 3L, 5, 3L, 6, 3L, 7)
+[I 171017 15:29:22 web:2063] 200 POST /api/house/info (192.168.2.101) 62.29ms
+[D 171017 15:31:20 House:255] insert into ih_house_facility(hf_house_id, hf_facility_id) values(%s, %s),(%s, %s)
+[D 171017 15:31:20 House:256] (4L, 1, 4L, 3)
+[I 171017 15:31:20 web:2063] 200 POST /api/house/info (192.168.2.101) 44.35ms
+[I 171017 15:34:06 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:37:45 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:38:21 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:38:24 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:38:29 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[D 171017 15:39:30 House:255] insert into ih_house_facility(hf_house_id, hf_facility_id) values(%s, %s),(%s, %s),(%s, %s)
+[D 171017 15:39:30 House:256] (5L, 1, 5L, 3, 5L, 4)
+[I 171017 15:39:30 web:2063] 200 POST /api/house/info (192.168.2.101) 67.18ms
+[I 171017 15:39:51 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:45:00 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:48:32 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:48:39 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:49:53 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:50:16 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:51:20 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 15:53:18 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[E 171017 15:55:14 web:1590] Uncaught exception GET /api/house/info (192.168.2.101)
+    HTTPServerRequest(protocol='http', host='192.168.2.102:8000', method='GET', uri='/api/house/info', version='HTTP/1.1', remote_ip='192.168.2.101', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.2.102:8000', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'session_id="2|1:0|10:1508211318|10:session_id|44:M2FhZDY5MzI3N2VlNDc5Yjk5ZmUzZTkwMmU2NzgyZWI=|0145cae8e689e6272f6fe7318e4ddd85687416f1fb2588e0c32acbd895a9702a"; _xsrf=2|51a877dc|a0f928a121f4af9954980d110fe6ca54|1508217335', 'Cache-Control': 'no-cache', 'Postman-Token': '96cbc4c1-15c7-5662-d6b7-ac448e2e643f'})
+    Traceback (most recent call last):
+      File "/home/liusple/.virtualenvs/py2_tornado/local/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/liusple/python/project/tornado/PrettyHome/handlers/House.py", line 272, in get
+        user_id = Session.data.get("user_id", "-1")
+    AttributeError: type object 'Session' has no attribute 'data'
+[E 171017 15:55:14 web:2063] 500 GET /api/house/info (192.168.2.101) 15.87ms
+[I 171017 15:55:41 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[W 171017 15:55:49 web:1587] 400 GET /api/house/info (192.168.2.101): Missing argument house_id
+[W 171017 15:55:49 web:2063] 400 GET /api/house/info (192.168.2.101) 8.20ms
+[I 171017 15:56:51 web:2063] 200 GET /api/house/info?house_id=3 (192.168.2.101) 163.37ms
+[I 171017 16:01:52 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 16:04:50 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/utils/qiniu_storage.py modified; restarting server
+[I 171017 16:04:52 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/utils/qiniu_storage.py modified; restarting server
+[I 171017 16:05:36 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/utils/qiniu_storage.py modified; restarting server
+[D 171017 16:17:49 retry:200] Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+[D 171017 16:17:49 connectionpool:208] Starting new HTTP connection (1): up.qiniu.com
+[D 171017 16:17:49 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 16:17:49 qiniu_storage:35] {u'hash': u'FkA586VxbgAfEaN5etO20VjA1qnV', u'key': u'FkA586VxbgAfEaN5etO20VjA1qnV'}
+[D 171017 16:17:49 qiniu_storage:36] exception:None, status_code:200, _ResponseInfo__response:<Response [200]>, text_body:{"hash":"FkA586VxbgAfEaN5etO20VjA1qnV","key":"FkA586VxbgAfEaN5etO20VjA1qnV"}, req_id:AnoAADt0DsqeTe4U, x_log:body;s.ph;s.put.tw;s.put.tr:1;s.put.tw;s.put.tr:5;s.ph;PFDS:5;PFDS:9;rs36_5.sel:4/not found;rdb.g/no such key;DBD/404;v4.get/Document not found;rs36_5.ins:8;rwro.ins:13;RS:14;rs.put:14;rs-upload.putFile:26;UP:27
+[I 171017 16:17:49 qiniu_storage:40] image:FkA586VxbgAfEaN5etO20VjA1qnV upload success
+[E 171017 16:17:49 torndb:236] Error connecting to MySQL on 127.0.0.1
+[E 171017 16:17:49 House:122] (1366, "Incorrect integer value: '' for column 'hi_house_id' at row 1")
+[I 171017 16:17:49 web:2063] 200 POST /api/house/image (192.168.2.101) 419.09ms
+[D 171017 16:20:54 connectionpool:243] Resetting dropped connection: up.qiniu.com
+[D 171017 16:20:54 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 16:20:54 qiniu_storage:35] {u'hash': u'FtNULP9awAvVPlgjbCkYNQ7ubxjK', u'key': u'FtNULP9awAvVPlgjbCkYNQ7ubxjK'}
+[D 171017 16:20:54 qiniu_storage:36] exception:None, status_code:200, _ResponseInfo__response:<Response [200]>, text_body:{"hash":"FtNULP9awAvVPlgjbCkYNQ7ubxjK","key":"FtNULP9awAvVPlgjbCkYNQ7ubxjK"}, req_id:gyUAAAQ9Ee3JTe4U, x_log:body;s.ph:39;s.put.tw;s.put.tr;s.put.tw;s.put.tr;s.ph;PFDS;PFDS:40;rs36_17.sel:4/not found;rdb.g/no such key;DBD/404;v4.get/Document not found;rs36_17.ins:8;rwro.ins:14;RS:14;rs.put:15;rs-upload.putFile:56;UP:57
+[I 171017 16:20:54 qiniu_storage:40] image:FtNULP9awAvVPlgjbCkYNQ7ubxjK upload success
+[I 171017 16:20:55 web:2063] 200 POST /api/house/image (192.168.2.101) 365.50ms
+[D 171017 16:24:41 connectionpool:243] Resetting dropped connection: up.qiniu.com
+[D 171017 16:24:41 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 16:24:41 qiniu_storage:35] {u'hash': u'FszLGZXA7JvedRoyQ5A_TfTP5Ba3', u'key': u'FszLGZXA7JvedRoyQ5A_TfTP5Ba3'}
+[D 171017 16:24:41 qiniu_storage:36] exception:None, status_code:200, _ResponseInfo__response:<Response [200]>, text_body:{"hash":"FszLGZXA7JvedRoyQ5A_TfTP5Ba3","key":"FszLGZXA7JvedRoyQ5A_TfTP5Ba3"}, req_id:WwcAAF0Nwp_-Te4U, x_log:body;s.ph;s.put.tw;s.put.tr:1;s.put.tw;s.put.tr:13;s.ph;PFDS:13;PFDS:18;rs36_6.sel:4/not found;rdb.g/no such key;DBD/404;v4.get/Document not found;rs36_6.ins:6;rwro.ins:11;RS:12;rs.put:12;rs-upload.putFile:31;UP:89
+[I 171017 16:24:41 qiniu_storage:40] image:FszLGZXA7JvedRoyQ5A_TfTP5Ba3 upload success
+[I 171017 16:24:41 web:2063] 200 POST /api/house/image (192.168.2.101) 248.78ms
+[D 171017 16:25:01 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 16:25:01 qiniu_storage:35] {u'hash': u'Fsn_GY3meritxloY9EpYwA54muF3', u'key': u'Fsn_GY3meritxloY9EpYwA54muF3'}
+[D 171017 16:25:01 qiniu_storage:36] exception:None, status_code:200, _ResponseInfo__response:<Response [200]>, text_body:{"hash":"Fsn_GY3meritxloY9EpYwA54muF3","key":"Fsn_GY3meritxloY9EpYwA54muF3"}, req_id:J3kAAInowm0DTu4U, x_log:body;s.ph;s.put.tw;s.put.tr:1;s.put.tw;s.put.tr:1;s.ph;PFDS:1;PFDS:2;rs36_17.sel:9/not found;rdb.g/no such key;DBD/404;v4.get/Document not found;rs36_17.ins:12;rwro.ins:22;RS:22;rs.put:23;rs-upload.putFile:26;UP:29
+[I 171017 16:25:01 qiniu_storage:40] image:Fsn_GY3meritxloY9EpYwA54muF3 upload success
+[I 171017 16:25:01 web:2063] 200 POST /api/house/image (192.168.2.101) 299.17ms
+[D 171017 16:25:43 connectionpool:396] http://up.qiniu.com:80 "POST / HTTP/1.1" 200 76
+[D 171017 16:25:43 qiniu_storage:35] {u'hash': u'FkA586VxbgAfEaN5etO20VjA1qnV', u'key': u'FkA586VxbgAfEaN5etO20VjA1qnV'}
+[D 171017 16:25:43 qiniu_storage:36] exception:None, status_code:200, _ResponseInfo__response:<Response [200]>, text_body:{"hash":"FkA586VxbgAfEaN5etO20VjA1qnV","key":"FkA586VxbgAfEaN5etO20VjA1qnV"}, req_id:WwcAAPAeaRoNTu4U, x_log:body;s.ph;s.put.tw;s.put.tr;s.put.tw;s.put.tr:1;s.ph;PFDS:1;PFDS:7;rs36_5.sel:4;rwro.ins:4/same entry;rs36_5.sel:15;rwro.get:15;MQ;RS.not:;RS:21;rs.put:22;rs-upload.putFile:30;UP:30
+[I 171017 16:25:43 qiniu_storage:40] image:FkA586VxbgAfEaN5etO20VjA1qnV upload success
+[I 171017 16:25:43 web:2063] 200 POST /api/house/image (192.168.2.101) 146.12ms
+[I 171017 16:28:03 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 16:28:16 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 46.03ms
+[I 171017 16:28:57 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 16:29:30 web:2063] 200 GET /api/house/my (192.168.2.101) 3.71ms
+[I 171017 16:30:05 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/utils/qiniu_storage.py modified; restarting server
+[I 171017 16:31:14 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/utils/qiniu_storage.py modified; restarting server
+[I 171017 16:32:18 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/urls.py modified; restarting server
+[I 171017 16:52:12 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/urls.py modified; restarting server
+[W 171017 17:47:32 web:2063] 405 POST /api/order/ (192.168.2.101) 3.38ms
+[D 171017 17:47:40 Orders:30] {'hi_price': 100000L, 'hi_user_id': 10000L}
+[E 171017 17:47:40 web:1590] Uncaught exception POST /api/order (192.168.2.101)
+    HTTPServerRequest(protocol='http', host='192.168.2.102:8000', method='POST', uri='/api/order', version='HTTP/1.1', remote_ip='192.168.2.101', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '79', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.2.102:8000', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.81 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'session_id="2|1:0|10:1508211318|10:session_id|44:M2FhZDY5MzI3N2VlNDc5Yjk5ZmUzZTkwMmU2NzgyZWI=|0145cae8e689e6272f6fe7318e4ddd85687416f1fb2588e0c32acbd895a9702a"; _xsrf=2|51a877dc|a0f928a121f4af9954980d110fe6ca54|1508217335', 'Cache-Control': 'no-cache', 'Content-Type': 'application/json', 'Postman-Token': 'e407c3c7-9724-a729-6015-d18d4f671fec'})
+    Traceback (most recent call last):
+      File "/home/liusple/.virtualenvs/py2_tornado/local/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/home/liusple/python/project/tornado/PrettyHome/utils/commons.py", line 13, in wrapper
+        fun(request_handler_obj, *args, **kwargs)
+      File "/home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py", line 35, in post
+        days = (datetime.datetime.strftime(end_date, "%Y-%m-%d") - datetime.datetime.strftime(start_date, "%Y-%m-%d")).days + 1
+    TypeError: descriptor 'strftime' requires a 'datetime.date' object but received a 'unicode'
+[E 171017 17:47:40 web:2063] 500 POST /api/order (192.168.2.101) 28.70ms
+[I 171017 17:48:05 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[D 171017 17:48:10 Orders:30] {'hi_price': 100000L, 'hi_user_id': 10000L}
+[E 171017 17:48:11 Orders:54] global name 'begin_date' is not defined
+[I 171017 17:48:11 web:2063] 200 POST /api/order (192.168.2.101) 699.60ms
+[I 171017 17:50:54 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[D 171017 17:50:57 Orders:30] {'hi_price': 100000L, 'hi_user_id': 10000L}
+[I 171017 17:50:57 web:2063] 200 POST /api/order (192.168.2.101) 114.57ms
+[D 171017 17:54:20 Orders:30] {'hi_price': 100000L, 'hi_user_id': 10000L}
+[I 171017 17:54:20 web:2063] 200 POST /api/order (192.168.2.101) 8.48ms
+[D 171017 17:56:43 Orders:30] {'hi_price': 220000L, 'hi_user_id': 10000L}
+[I 171017 17:56:43 web:2063] 200 POST /api/order (192.168.2.101) 4.80ms
+[D 171017 17:57:03 Orders:30] {'hi_price': 220000L, 'hi_user_id': 10000L}
+[I 171017 17:57:03 web:2063] 200 POST /api/order (192.168.2.101) 95.88ms
+[I 171017 17:59:12 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 17:59:17 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/urls.py modified; restarting server
+[I 171017 17:59:18 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:01:26 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 6.95ms
+[I 171017 18:03:08 web:2063] 200 POST /api/order/comment (192.168.2.101) 66.66ms
+[I 171017 18:04:40 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 57.28ms
+[I 171017 18:12:26 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:12:29 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 12.96ms
+[I 171017 18:13:14 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 11.09ms
+[I 171017 18:13:45 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:13:59 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 31.81ms
+[I 171017 18:14:22 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:14:26 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 15.67ms
+[I 171017 18:17:34 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 6.01ms
+[I 171017 18:17:43 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 43.77ms
+[I 171017 18:18:08 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:18:16 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 8.86ms
+[I 171017 18:18:39 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:18:53 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 54.15ms
+[I 171017 18:20:39 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:20:50 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:21:45 web:2063] 200 GET /api/house/info?house_id=5 (192.168.2.101) 7.11ms
+[I 171017 18:22:14 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 18:22:20 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 19:46:44 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 19:58:04 web:2063] 200 GET /api/order/my?role= (192.168.2.101) 7.75ms
+[I 171017 19:59:01 web:2063] 200 GET /api/order/my?role=landlor (192.168.2.101) 3.17ms
+[I 171017 19:59:08 web:2063] 200 GET /api/order/my (192.168.2.101) 9.01ms
+[W 171017 19:59:26 web:2063] 404 GET /api/ (192.168.2.101) 50.44ms
+[I 171017 19:59:45 web:2063] 200 GET /api/order/my (192.168.2.101) 9.54ms
+[W 171017 20:00:31 web:2063] 404 GET /api/order/m (192.168.2.101) 4.02ms
+[I 171017 20:00:43 web:2063] 200 GET /api/order/my?role=landlord (192.168.2.101) 2.14ms
+[I 171017 20:01:04 web:2063] 200 GET /api/order/my?role=landlord (192.168.2.101) 2.97ms
+[I 171017 20:16:49 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 20:16:57 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 20:24:24 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 20:25:27 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 20:25:55 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[D 171017 20:38:21 Orders:30] {'hi_price': 0L, 'hi_user_id': 10001L}
+[I 171017 20:38:21 web:2063] 200 POST /api/order (192.168.2.101) 56.76ms
+[D 171017 20:40:50 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 20:40:50 Passport:84] <type 'str'>
+[D 171017 20:40:50 Passport:85] <type 'unicode'>
+[I 171017 20:40:50 web:2063] 200 POST /api/login (192.168.2.101) 11.41ms
+[D 171017 20:42:00 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 20:42:00 Passport:84] <type 'str'>
+[D 171017 20:42:00 Passport:85] <type 'unicode'>
+[I 171017 20:42:00 web:2063] 200 POST /api/login (192.168.2.101) 7.28ms
+[D 171017 20:46:19 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 20:46:19 Passport:84] <type 'str'>
+[D 171017 20:46:19 Passport:85] <type 'unicode'>
+[I 171017 20:46:19 web:2063] 200 POST /api/login (192.168.2.101) 23.47ms
+[D 171017 20:46:36 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 20:46:36 Passport:84] <type 'str'>
+[D 171017 20:46:36 Passport:85] <type 'unicode'>
+[I 171017 20:46:36 web:2063] 200 POST /api/login (192.168.2.101) 21.61ms
+[D 171017 20:47:08 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 20:47:08 Passport:84] <type 'str'>
+[D 171017 20:47:08 Passport:85] <type 'unicode'>
+[I 171017 20:47:08 web:2063] 200 POST /api/login (192.168.2.101) 6.22ms
+[I 171017 20:47:50 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/utils/session.py modified; restarting server
+[D 171017 20:48:08 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 20:48:08 Passport:84] <type 'str'>
+[D 171017 20:48:08 Passport:85] <type 'unicode'>
+[I 171017 20:48:08 web:2063] 200 POST /api/login (192.168.2.101) 10.67ms
+[D 171017 20:48:59 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 20:48:59 Passport:84] <type 'str'>
+[D 171017 20:48:59 Passport:85] <type 'unicode'>
+[I 171017 20:48:59 web:2063] 200 POST /api/login (192.168.2.101) 6.77ms
+[D 171017 20:50:26 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 20:50:26 Passport:84] <type 'str'>
+[D 171017 20:50:26 Passport:85] <type 'unicode'>
+[I 171017 20:50:26 web:2063] 200 POST /api/login (192.168.2.101) 8.83ms
+[D 171017 20:57:51 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 20:57:51 Passport:84] <type 'str'>
+[D 171017 20:57:51 Passport:85] <type 'unicode'>
+[I 171017 20:57:51 web:2063] 200 POST /api/login (192.168.2.101) 6.05ms
+[I 171017 21:01:23 web:2063] 200 POST /api/order/accept (192.168.2.101) 5.37ms
+[I 171017 21:01:56 web:2063] 200 POST /api/order/accept (192.168.2.101) 6.52ms
+[I 171017 21:03:00 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 21:03:12 web:2063] 200 POST /api/order/accept (192.168.2.101) 5.59ms
+[I 171017 21:10:27 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/Orders.py modified; restarting server
+[I 171017 21:10:40 web:2063] 200 POST /api/order/accept (192.168.2.101) 10.07ms
+[I 171017 21:10:54 web:2063] 200 POST /api/order/accept (192.168.2.101) 26.94ms
+[D 171017 21:16:55 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 21:16:55 Passport:84] <type 'str'>
+[D 171017 21:16:55 Passport:85] <type 'unicode'>
+[I 171017 21:16:55 web:2063] 200 POST /api/login (192.168.2.101) 7.32ms
+[D 171017 21:22:38 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 21:22:38 Passport:84] <type 'str'>
+[D 171017 21:22:38 Passport:85] <type 'unicode'>
+[I 171017 21:22:38 web:2063] 200 POST /api/login (192.168.2.101) 9.94ms
+[D 171017 21:24:01 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 21:24:01 Passport:84] <type 'str'>
+[D 171017 21:24:01 Passport:85] <type 'unicode'>
+[I 171017 21:24:01 web:2063] 200 POST /api/login (192.168.2.101) 9.85ms
+[D 171017 21:24:20 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 21:24:20 Passport:84] <type 'str'>
+[D 171017 21:24:20 Passport:85] <type 'unicode'>
+[I 171017 21:24:20 web:2063] 200 POST /api/login (192.168.2.101) 14.13ms
+[D 171017 21:24:35 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 21:24:35 Passport:84] <type 'str'>
+[D 171017 21:24:35 Passport:85] <type 'unicode'>
+[I 171017 21:24:35 web:2063] 200 POST /api/login (192.168.2.101) 3.97ms
+[D 171017 21:24:41 Orders:30] {'hi_price': 0L, 'hi_user_id': 10001L}
+[I 171017 21:24:41 web:2063] 200 POST /api/order (192.168.2.101) 20.64ms
+[D 171017 21:25:09 Passport:81] {'up_name': u'sam', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10001L}
+[D 171017 21:25:09 Passport:84] <type 'str'>
+[D 171017 21:25:09 Passport:85] <type 'unicode'>
+[I 171017 21:25:09 web:2063] 200 POST /api/login (192.168.2.101) 13.06ms
+[I 171017 21:26:25 web:2063] 200 POST /api/order/reject (192.168.2.101) 13.66ms
+[I 171017 21:27:26 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/urls.py modified; restarting server
+[D 171017 21:33:31 Passport:81] {'up_name': u'alex', 'up_passwd': u'487ffd8cf71fc649648cd77972ccdc3002473e5aad490b3ea72779268d4c8a00', 'up_user_id': 10000L}
+[D 171017 21:33:31 Passport:84] <type 'str'>
+[D 171017 21:33:31 Passport:85] <type 'unicode'>
+[I 171017 21:33:31 web:2063] 200 POST /api/login (192.168.2.101) 19.97ms
+[I 171017 21:34:35 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 21:34:43 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/urls.py modified; restarting server
+[I 171017 21:34:45 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
+[I 171017 21:35:02 autoreload:198] /home/liusple/python/project/tornado/PrettyHome/handlers/House.py modified; restarting server
