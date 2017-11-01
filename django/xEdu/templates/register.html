@@ -69,7 +69,7 @@
             <p class="fl hd-tips">xEdu在线学习平台！</p>
             <ul class="fr hd-bar">
                 <li><a href="/login/">[登录]</a></li>
-                <li class="active"><a href="/register/">[注册]</a></li>
+                <li class="active"><a href="{% url 'register' %}">[注册]</a></li>
             </ul>
         </div>
     </div>
@@ -77,9 +77,9 @@
 <section>
     <div class="c-box bg-box">
         <div class="login-box clearfix">
-            <div class="hd-login clearfix">
+            <div class="clearfix">
                 <a class="" href=""></a>
-                <h1>用户注册</h1>
+                <!-- <h1>用户注册</h1> -->
                 <a class="index-font" href="{% url 'index' %}">回到首页</a>
             </div>
             <div class="fl slide">
@@ -154,7 +154,7 @@
                     {% csrf_token %}
                     </form>
                 </div>
-                <p class="form-p">已有账号？<a href="{url 'login'}}">[立即登录]</a></p>
+                <p class="form-p">已有账号？<a href="{%url 'login'%}">[立即登录]</a></p>
             </div>
         </div>
     </div>
