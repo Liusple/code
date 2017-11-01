@@ -17,5 +17,5 @@ for i in range(10):
 	
 p.close()
 p.join()
-print("child end")
+print("child end") #父进程不会等待子进程，必须使用join
 

@@ -3,8 +3,8 @@ from socket import *
 server_socket = socket(AF_INET, SOCK_STREAM)
 server_socket.bind(("", 9090))
 server_socket.listen(5)
-#设置为⾮堵塞后，如果accept时，恰巧没有客户端connect，那么accept会
-#产⽣⼀个异常，所以需要try来进⾏处理
+#设置为堵塞后，如果accept时，恰巧没有客户端connect，那么accept会
+#产生异常，所以需要try来进⾏处理
 server_socket.setblocking(False)
 
 socket_list = []

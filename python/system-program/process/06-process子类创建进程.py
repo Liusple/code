@@ -6,7 +6,7 @@ import time
 class MyProcess(Process):
 	def __init__(self, time):
 		self.time = time
-		Process.__init__(self)
+		Process.__init__(self)  #important
 	
 	def run(self):
 		c_start = time.time()
